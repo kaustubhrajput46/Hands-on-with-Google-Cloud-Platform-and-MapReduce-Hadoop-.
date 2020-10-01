@@ -1,0 +1,3 @@
+First worst system with id = 9 and age = 30  with temperature diff of  15
+Second worst system with id = 4 and age = 30  with temperature diff of  15
+Third worst system with id = 17 and age = 29  with temperature diff of  15
