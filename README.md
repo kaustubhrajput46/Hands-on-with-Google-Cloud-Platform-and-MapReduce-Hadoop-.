@@ -1,15 +1,15 @@
-#Goal was to Gain hands-on experience with Google Cloud Platform and MapReduce (Hadoop).
+# Goal was to Gain hands-on experience with Google Cloud Platform and MapReduce (Hadoop).
 
 
 
 
 
-###Problem statement :
+### Problem statement :
 
-#####Replacing existing heating/cooling (“HVAC”) systems can have a significant impact on the environment (as well as saving some money!) But in the absence of an outright failed system, identifying the specific system to replace can be challenging – one must consider years in service, efficiency of the unit, maintenance cost/records, general comfort level, user complaints, tax benefits, etc. In this small project, we are going to do some analysis that could help us make such a decision based on a dataset of measurements from a small collection of buildings using Hadoop to determine:
-######Q1. The 3 worst HVAC systems, based on all available data (where “worst” means the greatest difference between desired temperature and actual temperature)
+##### Replacing existing heating/cooling (“HVAC”) systems can have a significant impact on the environment (as well as saving some money!) But in the absence of an outright failed system, identifying the specific system to replace can be challenging – one must consider years in service, efficiency of the unit, maintenance cost/records, general comfort level, user complaints, tax benefits, etc. In this small project, we are going to do some analysis that could help us make such a decision based on a dataset of measurements from a small collection of buildings using Hadoop to determine:
+###### Q1. The 3 worst HVAC systems, based on all available data (where “worst” means the greatest difference between desired temperature and actual temperature)
 
-######Solution:
+###### Solution:
 
 Mapper :
 1. Takes the input from CSV and remove first line of csv
@@ -27,9 +27,9 @@ Reducer :
 5. File is output.txt in zip
 
 
-######Q2. The 3 hottest buildings, based on all available data, during normal business hours.
+###### Q2. The 3 hottest buildings, based on all available data, during normal business hours.
 
-######Solution: 
+###### Solution: 
 
 Mapper :
 1.	Takes the input from CSV and remove first line of csv
@@ -57,7 +57,7 @@ Reducer :
 
 
 
-#####Steps to replicate environment on Google Cloud Platform
+##### Steps to replicate environment on Google Cloud Platform
 
 1. Go to Google Cloud Platform (GCP): https://cloud.google.com/
 2. Click “Compute Engine” on left side, click “VM instance”, and click “Create.”
@@ -68,7 +68,7 @@ Reducer :
 7. Create a Fire rule from Firewall rules(On Network interface Details page) with "default-allow-all" select “All instances in the network” for Targets, Source IP ranges should be “0.0.0.0/0”, check “Allow all” for protocols and ports, and hit “create”
 8. Click “Google Cloud Platform” on the left top. Next is “Compute Engine” --> VM Instances, then you will see your instance. Click “ssh” button, then another pop-up window will show up and you will log into your instance.
 
-#####Steps to Install/Configure Hadoop on GCP Ubuntu 16.04 Server
+##### Steps to Install/Configure Hadoop on GCP Ubuntu 16.04 Server
 
 1. Install java
 
@@ -215,9 +215,9 @@ Reducer :
 	    $HADOOP_INSTALL/sbin/stop-dfs.sh
 	    exit
 	
-#####Done!!
+##### Done!!
 	
-####Additional Notes
+#### Additional Notes
 1. Start Hadoop (HDFS and YARN Resource Manager)
         
         sudo su -p - hduser -c $HADOOP_INSTALL/sbin/start-dfs.sh
